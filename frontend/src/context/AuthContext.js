@@ -12,7 +12,7 @@ export function AuthProvider({children}) {
     useEffect(() => {
         const checkExistingToken = async () => {
             try {
-                const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://34.228.71.230:9090/api';
+                const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://34.228.71.230:9092/api';
 
                 // First try the regular user profile endpoint
                 let response = await fetch(`${backendUrl}/profile`, {
@@ -55,7 +55,7 @@ export function AuthProvider({children}) {
 
     const login = async(email, password) => {
         try {
-            const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://18.207.128.131:9090/api';
+            const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://18.207.128.131:9092/api';
             const response = await fetch(`${backendUrl}/auth/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },

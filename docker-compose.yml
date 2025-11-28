@@ -23,8 +23,7 @@ services:
     container_name: arbeit-backend
     ports:
       - "9090:9090"
-    env_file:
-      - ./backend/.env
+
     environment:
       SPRING_PROFILES_ACTIVE: docker
       JAVA_OPTS: "-Xmx512m -Xms256m"

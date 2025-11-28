@@ -7,6 +7,7 @@ import com.arbeit.backend.dto.LoginResponse;
 import com.arbeit.backend.service.BusinessAuthService;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.http.ResponseCookie;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,12 +30,15 @@ public class BusinessAuthController {
             LoginResponse loginResponse = businessAuthService.login(request);
 
             // Set JWT token as HTTP-only cookie (single token, 30 min)
-            Cookie accessTokenCookie = new Cookie("accessToken", loginResponse.getAccessToken());
-            accessTokenCookie.setHttpOnly(true);
-            accessTokenCookie.setSecure(false); // Set to true in production with HTTPS
-            accessTokenCookie.setPath("/");
-            accessTokenCookie.setMaxAge(1800); // 30 minutes
-            response.addCookie(accessTokenCookie);
+            ResponseCookie accessTokenCookie = ResponseCookie.from("accessToken", loginResponse.getAccessToken())
+                    .httpOnly(true)
+                    .secure(false) // Set to true in production with HTTPS
+                    .path("/")
+                    .domain("localhost") // Explicitly set domain for localhost
+                    .maxAge(1800) // 30 minutes
+                    .sameSite("Lax") // Allow cross-site requests
+                    .build();
+            response.addHeader("Set-Cookie", accessTokenCookie.toString());
 
             // Don't send tokens in response body for security
             AuthResponse authResponse = new AuthResponse(loginResponse.getMessage(),

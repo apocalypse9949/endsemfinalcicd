@@ -10,7 +10,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Arbeit - Professional Job Search Portal",
+  title: "Lancer - Professional Job Search Portal",
   description: "Create professional resumes, find your dream job, and get insights with our ATS-friendly platform",
 };
 

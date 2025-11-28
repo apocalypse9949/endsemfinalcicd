@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: arbeit-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: arbeit-frontend
+  template:
+    metadata:
+      labels:
+        app: arbeit-frontend
+    spec:
+      containers:
+        - name: arbeit-frontend
+          image: arbeit-frontend:latest
+          imagePullPolicy: Never
+          ports:  
+            - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: frontend-config

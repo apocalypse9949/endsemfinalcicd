@@ -16,6 +16,7 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.util.Arrays;
+import java.util.stream.Collectors;
 
 @Configuration
 @EnableWebSecurity
@@ -82,13 +83,26 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
 
-        // Allow all origins
-        configuration.setAllowedOriginPatterns(Arrays.asList(allowedOrigins));
-
+        // Split allowed origins by comma and trim whitespace
+        if (allowedOrigins != null && !allowedOrigins.isEmpty()) {
+            if (allowedOrigins.equals("*")) {
+                // If wildcard is specified, allow all origins but disable credentials
+                configuration.setAllowedOriginPatterns(Arrays.asList("*"));
+                configuration.setAllowCredentials(false);
+            } else {
+                // Split by comma and allow specific origins
+                String[] origins = allowedOrigins.split(",");
+                configuration.setAllowedOriginPatterns(Arrays.stream(origins).map(String::trim).collect(Collectors.toList()));
+                configuration.setAllowCredentials(true);
+            }
+        } else {
+            // Default to localhost:3000
+            configuration.setAllowedOriginPatterns(Arrays.asList("http://localhost:3000", "http://localhost:30080"));
+            configuration.setAllowCredentials(true);
+        }
 
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
-        configuration.setAllowCredentials(true);
         configuration.setExposedHeaders(Arrays.asList("Authorization"));
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();

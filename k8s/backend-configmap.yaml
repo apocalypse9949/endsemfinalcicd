@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+data:
+  SPRING_PROFILES_ACTIVE: "docker"
+  SERVER_PORT: "9090"
+  # For local cluster use the in-cluster MySQL service 'arbeit-mysql'.
+  # If you want to use the remote RDS, set this back to the RDS hostname.
+  DB_URL: "jdbc:mysql://arbeit-mysql:3306/arbeit"

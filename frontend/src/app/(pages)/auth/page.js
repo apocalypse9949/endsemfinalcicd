@@ -158,15 +158,15 @@ export default function AuthPage() {
           </div>
           <div className="brand-content">
             <div className="logo">
-              <span className="logo-main">Arbeit</span>
+              <span className="logo-main">Lancer</span>
             </div>
             <div className="hero-text">
               <h1>
-                <span className="text-gradient">Organize</span>
-                <span className="text-gradient">Track</span>
-                <span className="text-gradient">Succeed</span>
+                <span className="text-gradient">Connect</span>
+                <span className="text-gradient">Create</span>
+                <span className="text-gradient">Thrive</span>
               </h1>
-              <p className="hero-subtitle">Your journey to better productivity starts here</p>
+              <p className="hero-subtitle">Your platform for freelance success starts here</p>
             </div>
           </div>
         </div>
@@ -175,10 +175,10 @@ export default function AuthPage() {
           <div className="auth-card">
             <div className="auth-header">
               <h2 className="auth-title">
-                {isLogin ? 'Welcome Back!' : 'Create Account'}
+                {isLogin ? 'Welcome Back, Freelancer!' : 'Join Lancer'}
               </h2>
               <p className="auth-subtitle">
-                {isLogin ? 'Let\'s get you back to being productive' : 'Join us and boost your productivity'}
+                {isLogin ? 'Let\'s get you back to your projects' : 'Join our community and grow your freelance career'}
               </p>
             </div>
 

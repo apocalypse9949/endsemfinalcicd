@@ -45,9 +45,9 @@ export default function Home() {
   });
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-light-blue text-gray-900">
       {/* New Background */}
-      <div className="absolute top-0 -z-10 h-full w-full bg-white">
+      <div className="absolute top-0 -z-10 h-full w-full bg-light-blue">
         <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]"></div>
         <div className="absolute bottom-0 left-0 h-[500px] w-[500px] translate-x-[20%] translate-y-[20%] rounded-full bg-[rgba(59,130,246,0.5)] opacity-50 blur-[80px]"></div>
       </div>
@@ -80,12 +80,12 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
                 >
-                  Find Your{' '}
+                  Unlock Your{' '}
                   <span className="text-blue-600">
-                    Dream
+                    Freelancing
                   </span>
                   <br />
-                  Career Today
+                  Potential
                 </motion.h1>
 
                 <motion.p 
@@ -94,7 +94,7 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
                 >
-                  Your one-stop platform for job search, resume building, and career growth.
+                  Connect with clients, manage projects, and grow your freelance business.
                 </motion.p>
 
                 <motion.div
@@ -109,16 +109,16 @@ export default function Home() {
                       whileTap={{ scale: 0.98 }}
                       className="w-full sm:w-auto px-8 py-4 bg-blue-600 text-white rounded-xl font-semibold text-lg shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 transition-all"
                     >
-                      Get Started as Recruiter
+                      Hire Freelancers
                     </motion.button>
                   </Link>
                   <Link href="/auth">
                     <motion.button
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      className="w-full sm:w-auto px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold text-lg border-2 border-blue-600 hover:bg-blue-50 transition-all"
+                      className="w-full sm:w-auto px-8 py-4 bg-light-blue text-blue-600 rounded-xl font-semibold text-lg border-2 border-blue-600 hover:bg-blue-100 transition-all"
                     >
-                      Join as Freelancer
+                      Start Freelancing
                     </motion.button>
                   </Link>
                 </motion.div>
@@ -132,11 +132,11 @@ export default function Home() {
                 transition={{ delay: 0.4, duration: 0.8 }}
               >
                 <div className="relative w-full aspect-square">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-white rounded-3xl transform rotate-6" />
-                  <div className="absolute inset-0 bg-white rounded-3xl shadow-xl p-8">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-light-blue rounded-3xl transform rotate-6" />
+                  <div className="absolute inset-0 bg-light-blue rounded-3xl shadow-xl p-8">
                     <div className="relative h-full">
                       {/* Resume Preview */}
-                      <div className="absolute top-4 left-4 right-4 bottom-4 bg-gray-50 rounded-2xl p-6 shadow-inner">
+                      <div className="absolute top-4 left-4 right-4 bottom-4 bg-light-blue rounded-2xl p-6 shadow-inner">
                         {/* Header with Avatar */}
                         <div className="flex items-center gap-4 mb-6">
                           <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
@@ -204,15 +204,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section with Animated Counters */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-light-blue">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { number: "150,000", label: "Active Jobs", icon: "📊" },
-              { number: "75,000", label: "Companies", icon: "🏢" },
-              { number: "2,000,000", label: "Job Seekers", icon: "👥" },
-              { number: "95,000", label: "Success Stories", icon: "🌟" }
+              { number: "150,000", label: "Active Projects", icon: "📊" },
+              { number: "75,000", label: "Clients", icon: "🏢" },
+              { number: "2,000,000", label: "Freelancers", icon: "👥" },
+              { number: "95,000", label: "Successful Projects", icon: "🌟" }
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -222,7 +221,7 @@ export default function Home() {
                 transition={{ delay: index * 0.2 }}
                 className="relative group"
               >
-                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100">
+                <div className="bg-light-blue p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100">
                   <div className="text-4xl mb-4">{stat.icon}</div>
                   <h3 className="text-4xl font-bold text-blue-600 mb-2">
                     <AnimatedCounter value={stat.number} />+
@@ -236,7 +235,7 @@ export default function Home() {
       </section>
 
       {/* ATS Scanner Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-light-blue">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
             <motion.div 
@@ -246,36 +245,36 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-bold mb-6">
-                AI-Powered ATS Scanner
-                <span className="block text-blue-600 mt-2">Optimize Your Resume</span>
+                AI-Powered Proposal Builder
+                <span className="block text-blue-600 mt-2">Craft Winning Proposals</span>
               </h2>
               <p className="text-xl text-gray-600 mb-8">
-                Ensure your resume gets past Applicant Tracking Systems with our advanced AI scanner. Get instant feedback and optimization suggestions.
+                Generate compelling proposals that win clients. Get instant feedback and optimization suggestions.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
                 {[
                   {
                     icon: "🎯",
-                    title: "Keyword Analysis",
-                    description: "Match your resume with job requirements"
+                    title: "Client Requirement Analysis",
+                    description: "Tailor proposals to client needs"
                   },
                   {
                     icon: "📈",
-                    title: "Score Tracking",
-                    description: "Get detailed performance metrics"
+                    title: "Proposal Score",
+                    description: "Track your proposal's effectiveness"
                   },
                   {
                     icon: "💡",
-                    title: "Smart Suggestions",
-                    description: "Receive AI-powered improvements"
+                    title: "Smart Content Suggestions",
+                    description: "Receive AI-powered writing improvements"
                   },
                   {
                     icon: "⚡",
-                    title: "Instant Results",
-                    description: "See feedback in real-time"
+                    title: "Instant Generation",
+                    description: "Generate proposals in real-time"
                   }
                 ].map((feature, index) => (
-                  <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
+                  <div key={index} className="bg-light-blue p-6 rounded-xl shadow-lg">
                     <span className="text-3xl mb-4 block">{feature.icon}</span>
                     <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
                     <p className="text-gray-600">{feature.description}</p>
@@ -300,7 +299,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
+              <div className="bg-light-blue p-8 rounded-3xl shadow-xl border border-gray-100">
                 <div className="space-y-8">
                   {/* Scanner Header */}
                   <div className="flex items-center justify-between">
@@ -308,7 +307,7 @@ export default function Home() {
                       <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
                         <span className="text-xl">🔍</span>
                       </div>
-                      <div className="font-semibold text-gray-800">ATS Score Analysis</div>
+                      <div className="font-semibold text-gray-800">Proposal Score Analysis</div>
                     </div>
                     <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold">
                       92
@@ -318,7 +317,7 @@ export default function Home() {
                   <div className="space-y-4">
                     <div>
                       <div className="flex justify-between mb-1">
-                        <span className="text-sm text-gray-600">Keywords Match</span>
+                        <span className="text-sm text-gray-600">Requirements Match</span>
                         <span className="text-sm font-medium text-blue-600">95%</span>
                       </div>
                       <div className="h-2 bg-gray-100 rounded-full">
@@ -327,7 +326,7 @@ export default function Home() {
                     </div>
                     <div>
                       <div className="flex justify-between mb-1">
-                        <span className="text-sm text-gray-600">Format Optimization</span>
+                        <span className="text-sm text-gray-600">Clarity & Impact</span>
                         <span className="text-sm font-medium text-blue-600">88%</span>
                       </div>
                       <div className="h-2 bg-gray-100 rounded-full">
@@ -336,7 +335,7 @@ export default function Home() {
                     </div>
                     <div>
                       <div className="flex justify-between mb-1">
-                        <span className="text-sm text-gray-600">Content Quality</span>
+                        <span className="text-sm text-gray-600">Persuasiveness</span>
                         <span className="text-sm font-medium text-blue-600">92%</span>
                       </div>
                       <div className="h-2 bg-gray-100 rounded-full">
@@ -346,20 +345,20 @@ export default function Home() {
                   </div>
                   {/* Suggestions */}
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-gray-50 p-4 rounded-xl">
+                    <div className="bg-light-blue p-4 rounded-xl">
                       <div className="flex items-center gap-2 mb-2">
                         <span className="text-green-500">✓</span>
-                        <span className="text-sm font-medium">Strong Points</span>
+                        <span className="text-sm font-medium">Key Strengths</span>
                       </div>
                       <div className="space-y-1">
                         <div className="h-2 bg-green-100 rounded w-full"></div>
                         <div className="h-2 bg-green-100 rounded w-4/5"></div>
                       </div>
                     </div>
-                    <div className="bg-gray-50 p-4 rounded-xl">
+                    <div className="bg-light-blue p-4 rounded-xl">
                       <div className="flex items-center gap-2 mb-2">
                         <span className="text-yellow-500">!</span>
-                        <span className="text-sm font-medium">Suggestions</span>
+                        <span className="text-sm font-medium">Improvements</span>
                       </div>
                       <div className="space-y-1">
                         <div className="h-2 bg-yellow-100 rounded w-full"></div>
@@ -375,51 +374,51 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section id="features" className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section id="features" className="py-20 bg-gradient-to-b from-light-blue to-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <motion.h2 
-              className="text-4xl font-bold mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              Why Choose Us
-            </motion.h2>
-            <motion.p 
-              className="text-xl text-gray-600 max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-            >
-              Empowering your career journey with cutting-edge technology
-            </motion.p>
+              <h2 
+                className="text-4xl font-bold mb-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                Why Choose Lancer
+              </h2>
+              <motion.p 
+                className="text-xl text-gray-600 max-w-3xl mx-auto"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+              >
+                Your ultimate platform for freelance success
+              </motion.p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                title: "AI-Powered Matching",
-                description: "Smart algorithms that connect the right talent with the right opportunities",
+                title: "Smart Project Matching",
+                description: "Intelligent algorithms connecting you with ideal freelance projects",
                 icon: "🎯",
                 stats: "95% Match Rate"
               },
               {
-                title: "Real-time Analytics",
-                description: "Detailed insights and tracking for your job search progress",
+                title: "Real-time Project Analytics",
+                description: "Detailed insights and tracking for your project progress",
                 icon: "📊",
                 stats: "24/7 Monitoring"
               },
               {
-                title: "Smart Learning",
-                description: "Personalized skill development recommendations",
+                title: "Skill Development",
+                description: "Personalized recommendations to enhance your freelance skills",
                 icon: "🧠",
                 stats: "500+ Courses"
               },
               {
-                title: "Global Network",
-                description: "Connect with professionals and companies worldwide",
+                title: "Global Freelance Network",
+                description: "Connect with clients and collaborators worldwide",
                 icon: "🌍",
                 stats: "150+ Countries"
               }
@@ -432,7 +431,7 @@ export default function Home() {
                 transition={{ delay: index * 0.2 }}
                 className="group relative"
               >
-                <div className="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all h-full">
+                <div className="bg-light-blue p-8 rounded-3xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all h-full">
                   <div className="absolute -top-4 right-8 bg-blue-600 text-white text-sm font-medium px-4 py-1 rounded-full">
                     {feature.stats}
                   </div>
@@ -452,45 +451,45 @@ export default function Home() {
       <section id="how-it-works" className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <motion.h2 
-              className="text-4xl font-bold mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              Your Journey to Success
-            </motion.h2>
-            <motion.p 
-              className="text-xl text-gray-600 max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-            >
-              A simple yet powerful process to advance your career
-            </motion.p>
+              <h2 
+                className="text-4xl font-bold mb-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                Your Path to Freelance Success
+              </h2>
+              <motion.p 
+                className="text-xl text-gray-600 max-w-3xl mx-auto"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+              >
+                A streamlined process to elevate your freelance career
+              </motion.p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative">
             {[
               {
                 step: "01",
-                title: "Create Your Profile",
-                description: "Build your professional identity with our AI-powered profile builder",
+                title: "Create Your Freelancer Profile",
+                description: "Showcase your skills and experience with our AI-powered profile builder",
                 icon: "👤",
                 color: "blue"
               },
               {
                 step: "02",
-                title: "Set Your Goals",
-                description: "Define your career objectives and get a personalized roadmap",
+                title: "Find Projects",
+                description: "Discover projects that match your expertise and goals",
                 icon: "🎯",
                 color: "purple"
               },
               {
                 step: "03",
-                title: "Connect & Grow",
-                description: "Match with opportunities and mentors aligned with your goals",
+                title: "Deliver & Grow",
+                description: "Successfully deliver projects and expand your client base",
                 icon: "🚀",
                 color: "green"
               }
@@ -503,7 +502,7 @@ export default function Home() {
                 transition={{ delay: index * 0.2 }}
                 className="relative"
               >
-                <div className="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all">
+                <div className="bg-light-blue p-8 rounded-3xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all">
                   <div className={`absolute -top-4 left-8 bg-${step.color}-600 text-white font-bold px-4 py-2 rounded-xl text-lg`}>
                     {step.step}
                   </div>
@@ -525,7 +524,7 @@ export default function Home() {
       </section>
 
       {/* AI-Powered Mentorship Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-20 bg-gradient-to-b from-light-blue to-gray-50">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <motion.div 
@@ -535,11 +534,11 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-bold mb-6">
-                AI-Powered Mentorship
-                <span className="block text-blue-600 mt-2">& Goal Tracking</span>
+                AI-Powered Freelance Coaching
+                <span className="block text-blue-600 mt-2">& Project Management</span>
               </h2>
               <p className="text-xl text-gray-600 mb-8">
-                Get personalized career guidance and track your professional growth with our intelligent mentorship system.
+                Get personalized coaching and manage your projects efficiently with our intelligent system.
               </p>
               
               {/* Feature Cards */}
@@ -547,26 +546,26 @@ export default function Home() {
                 {[
                   {
                     icon: "🎯",
-                    title: "Smart Goal Setting",
-                    description: "AI helps set achievable career milestones"
+                    title: "Smart Project Goal Setting",
+                    description: "AI helps set achievable project milestones"
                   },
                   {
                     icon: "🤖",
-                    title: "AI Mentor Match",
-                    description: "Connect with mentors based on your goals"
+                    title: "AI Client Match",
+                    description: "Connect with clients based on your skills and goals"
                   },
                   {
                     icon: "📈",
-                    title: "Progress Analytics",
-                    description: "Track your growth with detailed insights"
+                    title: "Project Progress Analytics",
+                    description: "Track your project progress with detailed insights"
                   },
                   {
                     icon: "🎓",
-                    title: "Learning Paths",
-                    description: "Customized skill development roadmaps"
+                    title: "Skill Enhancement Paths",
+                    description: "Customized roadmaps to enhance your freelance skills"
                   }
                 ].map((feature, index) => (
-                  <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+                  <div key={index} className="bg-light-blue p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
                     <span className="text-3xl mb-4 block">{feature.icon}</span>
                     <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
                     <p className="text-gray-600">{feature.description}</p>
@@ -580,7 +579,7 @@ export default function Home() {
                   whileTap={{ scale: 0.98 }}
                   className="px-8 py-4 bg-blue-600 text-white rounded-xl font-semibold text-lg shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 transition-all"
                 >
-                  Start Your Journey
+                  Start Your Freelance Journey
                 </motion.button>
               </Link>
             </motion.div>
@@ -592,7 +591,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
+              <div className="bg-light-blue p-8 rounded-3xl shadow-xl border border-gray-100">
                 <div className="space-y-8">
                   {/* Dashboard Header */}
                   <div className="flex items-center justify-between">
@@ -601,7 +600,7 @@ export default function Home() {
                         <span className="text-2xl">👨‍🏫</span>
                       </div>
                       <div>
-                        <div className="font-semibold text-gray-800">Your AI Mentor</div>
+                        <div className="font-semibold text-gray-800">Your AI Freelance Coach</div>
                         <div className="text-sm text-gray-500">Available 24/7</div>
                       </div>
                     </div>
@@ -613,22 +612,22 @@ export default function Home() {
                   {/* Goal Progress */}
                   <div className="space-y-4">
                     <div className="flex justify-between items-center">
-                      <h4 className="font-semibold">Current Goals</h4>
+                      <h4 className="font-semibold">Current Projects</h4>
                       <span className="text-blue-600 text-sm">3/5 Completed</span>
                     </div>
                     <div className="space-y-3">
-                      <div className="bg-gray-50 p-4 rounded-xl">
+                      <div className="bg-light-blue p-4 rounded-xl">
                         <div className="flex items-center justify-between mb-2">
-                          <span className="font-medium">Learn React Advanced</span>
+                          <span className="font-medium">Complete React Project</span>
                           <span className="text-green-600">85%</span>
                         </div>
                         <div className="h-2 bg-gray-200 rounded-full">
                           <div className="h-2 bg-green-400 rounded-full" style={{width: "85%"}}></div>
                         </div>
                       </div>
-                      <div className="bg-gray-50 p-4 rounded-xl">
+                      <div className="bg-light-blue p-4 rounded-xl">
                         <div className="flex items-center justify-between mb-2">
-                          <span className="font-medium">System Design</span>
+                          <span className="font-medium">System Architecture Project</span>
                           <span className="text-blue-600">60%</span>
                         </div>
                         <div className="h-2 bg-gray-200 rounded-full">
@@ -640,14 +639,14 @@ export default function Home() {
 
                   {/* Upcoming Goals */}
                   <div>
-                    <h4 className="font-semibold mb-4">Upcoming Goals</h4>
+                    <h4 className="font-semibold mb-4">Upcoming Projects</h4>
                     <div className="space-y-3">
-                      <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-xl">
+                      <div className="flex items-center gap-4 bg-light-blue p-4 rounded-xl">
                         <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-600">
                           <span>🎯</span>
                         </div>
                         <div className="flex-1">
-                          <div className="font-medium">Master Cloud Architecture</div>
+                          <div className="font-medium">Cloud Migration Project</div>
                           <div className="text-sm text-gray-500">Starting Next Week</div>
                         </div>
                         <motion.button
@@ -657,12 +656,12 @@ export default function Home() {
                           Start
                         </motion.button>
                       </div>
-                      <div className="flex items-center gap-4 bg-gray-50 p-4 rounded-xl">
+                      <div className="flex items-center gap-4 bg-light-blue p-4 rounded-xl">
                         <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
                           <span>📚</span>
                         </div>
                         <div className="flex-1">
-                          <div className="font-medium">DevOps Fundamentals</div>
+                          <div className="font-medium">DevOps Implementation</div>
                           <div className="text-sm text-gray-500">Planned for Q2</div>
                         </div>
                         <motion.button
@@ -682,14 +681,14 @@ export default function Home() {
                       whileTap={{ scale: 0.98 }}
                       className="flex-1 py-3 bg-blue-600 text-white rounded-xl font-medium"
                     >
-                      Schedule Session
+                      Schedule Coaching
                     </motion.button>
                     <motion.button
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       className="flex-1 py-3 bg-gray-100 text-gray-700 rounded-xl font-medium"
                     >
-                      View Roadmap
+                      View Project Board
                     </motion.button>
                   </div>
                 </div>
@@ -700,26 +699,26 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-light-blue">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <motion.h2 
-              className="text-4xl font-bold mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              Success Stories
-            </motion.h2>
-            <motion.p 
-              className="text-xl text-gray-600 max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-            >
-              Hear from professionals who found their dream jobs
-            </motion.p>
+              <h2 
+                className="text-4xl font-bold mb-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                Freelance Success Stories
+              </h2>
+              <motion.p 
+                className="text-xl text-gray-600 max-w-3xl mx-auto"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+              >
+                Hear from freelancers who achieved their goals
+              </motion.p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -728,19 +727,19 @@ export default function Home() {
                 name: "Sarah Johnson",
                 role: "Software Engineer at Google",
                 image: "/testimonial1.jpg",
-                quote: "The AI matching system helped me find the perfect role that matched my skills and aspirations."
+                quote: "The smart project matching helped me find ideal clients and projects."
               },
               {
                 name: "Michael Chen",
                 role: "Product Designer at Apple",
                 image: "/testimonial2.jpg",
-                quote: "The platform's design tools and resources were invaluable in showcasing my portfolio."
+                quote: "The platform's tools and resources were invaluable in showcasing my portfolio and winning projects."
               },
               {
                 name: "Emily Rodriguez",
                 role: "Marketing Manager at Netflix",
                 image: "/testimonial3.jpg",
-                quote: "Found my dream job within weeks. The process was smooth and professional throughout."
+                quote: "Landed high-paying projects within weeks. The process was smooth and professional throughout."
               }
             ].map((testimonial, index) => (
               <motion.div
@@ -751,7 +750,7 @@ export default function Home() {
                 transition={{ delay: index * 0.2 }}
                 className="group"
               >
-                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                <div className="bg-light-blue p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-xl">
                       {testimonial.name.charAt(0)}
@@ -789,14 +788,14 @@ export default function Home() {
         
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <motion.h2 
-              className="text-4xl font-bold mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              Ready to Start Your Journey?
-            </motion.h2>
+              <h2 
+                className="text-4xl font-bold mb-8"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                Ready to Elevate Your Freelance Career?
+              </h2>
             <motion.p 
               className="text-xl mb-12 opacity-90"
               initial={{ opacity: 0, y: 20 }}
@@ -804,15 +803,15 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              Join thousands of professionals who have already found their dream jobs through our platform
+              Join thousands of freelancers who have already found success through our platform
             </motion.p>
             <Link href="/auth/UserAuth">
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all"
+                className="px-8 py-4 bg-light-blue text-blue-600 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all"
               >
-                Get Started Now
+                Start Earning Now
               </motion.button>
             </Link>
           </div>
@@ -820,7 +819,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-50 py-12">
+      <footer className="bg-light-blue py-12">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
@@ -857,7 +856,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-gray-200 text-center text-gray-600">
-            <p>&copy; 2024 Arbeit. All rights reserved.</p>
+            <p>&copy; 2024 Lancer. All rights reserved.</p>
           </div>
         </div>
       </footer>

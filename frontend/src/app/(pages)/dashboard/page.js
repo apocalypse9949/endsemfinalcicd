@@ -99,7 +99,7 @@ export default function Dashboard() {
       {/* Header */}
       <header className="main-header">
         <div className="logo">
-          <h1>Arbeit</h1>
+          <h1>Lancer</h1>
         </div>
         
         <div className="search-bar">

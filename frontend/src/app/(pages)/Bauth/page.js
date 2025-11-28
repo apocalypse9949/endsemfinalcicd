@@ -131,10 +131,10 @@ const Bauthen = () => {
             <BusinessNetwork />
           </div>
           <div className="auth-card">
-            <h2>{isSignUp ? 'Register Your Business' : 'Business Login'}</h2>
+            <h2>{isSignUp ? 'Register as Client' : 'Client Login'}</h2>
             <p>{isSignUp 
-              ? 'Create your business account to start posting jobs' 
-              : 'Login to manage your jobs and applications'}
+              ? 'Create your client account to start posting projects' 
+              : 'Login to manage your projects and freelancers'}
             </p>
             <div className="toggle-buttons">
               <button 
@@ -142,14 +142,14 @@ const Bauthen = () => {
                 className={!isSignUp ? 'active' : ''}
                 disabled={loading}
               >
-                Business Login
+                Client Login
               </button>
               <button 
                 onClick={() => setIsSignUp(true)} 
                 className={isSignUp ? 'active' : ''}
                 disabled={loading}
               >
-                Register Business
+                Register Client
               </button>
             </div>
             {isSignUp ? (
@@ -188,7 +188,7 @@ const Bauthen = () => {
                     required
                     disabled={loading}
                   />
-                  <label htmlFor="companyName">Company Name</label>
+                  <label htmlFor="companyName">Client Name</label>
                 </div>
                 <div className="input-group">
                   <input
@@ -212,7 +212,7 @@ const Bauthen = () => {
                     required
                     disabled={loading}
                   />
-                  <label htmlFor="companyEmail">Company Email</label>
+                  <label htmlFor="companyEmail">Client Email</label>
                 </div>
                 <div className="input-group">
                   <input
@@ -227,7 +227,7 @@ const Bauthen = () => {
                   <label htmlFor="password">Password</label>
                 </div>
                 <button type="submit" disabled={loading}>
-                  {loading ? 'Processing...' : 'Register Business'}
+                  {loading ? 'Processing...' : 'Register Client'}
                 </button>
               </form>
             ) : (
@@ -242,7 +242,7 @@ const Bauthen = () => {
                     required 
                     disabled={loading}
                   />
-                  <label htmlFor="loginEmail">Company Email</label>
+                  <label htmlFor="loginEmail">Client Email</label>
                 </div>
                 <div className="input-group">
                   <input
@@ -266,10 +266,10 @@ const Bauthen = () => {
                   <label>Show Password</label>
                 </div>
                 <p className="login-note">
-                  Looking to apply for jobs? <a href="/auth">Click here</a> to go to the job seeker login.
+                  Looking to freelance? <a href="/auth">Click here</a> to go to the freelancer login.
                 </p>
                 <button type="submit" disabled={loading}>
-                  {loading ? 'Processing...' : 'Sign In to Business Account'}
+                  {loading ? 'Processing...' : 'Sign In to Client Account'}
                 </button>
               </form>
             )}

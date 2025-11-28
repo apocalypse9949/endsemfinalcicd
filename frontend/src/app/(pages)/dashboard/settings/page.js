@@ -327,7 +327,7 @@ const ProfilePage = () => {
     return (
       <div className="auth-container">
         <div className="auth-content">
-          <div className="logo">Arbeit</div>
+          <div className="logo">Lancer</div>
           <div className="auth-message">
             <h1>Welcome to Your Professional Profile</h1>
             <p>Please log in to manage your profile, applications, and career preferences.</p>
@@ -373,7 +373,7 @@ const ProfilePage = () => {
     <>
       <div className="dashboard">
         <aside className="sidebar">
-          <div className="logo">Arbeit</div>
+          <div className="logo">Lancer</div>
           <nav>
             <ul>
               <li 

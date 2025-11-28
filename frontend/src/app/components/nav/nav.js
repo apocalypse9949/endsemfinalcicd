@@ -27,7 +27,7 @@ export default function Nav() {
   return (
     <motion.nav
       className={`fixed w-full z-50 transition-all duration-300 mb-2 ${
-        isScrolled ? 'bg-white/80 backdrop-blur-lg shadow-lg py-4' : 'bg-transparent py-6'
+        isScrolled ? 'bg-light-blue/80 backdrop-blur-lg shadow-lg py-4' : 'bg-transparent py-6'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -36,7 +36,7 @@ export default function Nav() {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold text-blue-600">
-            Arbeit
+            Lancer
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -69,7 +69,7 @@ export default function Nav() {
             </Link>
             <Link
               href="/auth"
-              className="bg-white hover:bg-blue-50 text-blue-600 px-6 py-2 rounded-xl transition-colors border-2 border-blue-600"
+              className="bg-light-blue hover:bg-blue-100 text-blue-600 px-6 py-2 rounded-xl transition-colors border-2 border-blue-600"
             >
               For Freelancers
             </Link>

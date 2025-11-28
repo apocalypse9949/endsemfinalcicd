@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: arbeit-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: arbeit-backend
+  template:
+    metadata:
+      labels:
+        app: arbeit-backend
+    spec:
+      initContainers:
+        - name: wait-for-mysql
+          image: busybox:1.35
+          command: ['sh', '-c', 'until nc -z arbeit-mysql 3306; do echo waiting for mysql; sleep 2; done;']
+      containers:
+        - name: arbeit-backend
+          image: arbeit-backend:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 9090
+          envFrom:
+            - configMapRef:
+                name: backend-config
+            - secretRef:
+                name: backend-secret
